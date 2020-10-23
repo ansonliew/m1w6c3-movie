@@ -8,7 +8,7 @@ function buttonPressed(){
 
 	console.log(movie);
 
-	//Get the city name API
+	//Get the movie name API
 	fetch('http://www.omdbapi.com/?s='+movie+'&apikey=87d10179')
 	.then(response => response.json())
 	.then(data => {
@@ -72,6 +72,7 @@ function buttonPressed(){
 		//append td5 to tr
 		newTr.appendChild(td5)
 
+
 		newTr.movie = movies[i];
 		newTr.addEventListener('click', function(evt){
 			selectedMovie = evt.currentTarget.movie
@@ -80,7 +81,11 @@ function buttonPressed(){
 			document.getElementById("year").innerHTML = selectedMovie["Year"];
 			document.getElementById("imdbID").innerHTML = selectedMovie["imdbID"];
 			document.getElementById("type").innerHTML = selectedMovie["Type"]
-			document.getElementById("poster").innerHTML = selectedMovie["Poster"]
+			document.getElementById("poster").innerHTML = selectedMovie["imdbID"]
+
+			var info = "More Movie Info"
+			var result = info.link("http://www.omdbapi.com/?i=" + selectedMovie["imdbID"] + "tt1201607&apikey=87d10179");
+			document.getElementById("moreLink").innerHTML = info.link("http://www.omdbapi.com/?i=" + selectedMovie["imdbID"] + "&apikey=87d10179");
 		})
 
 		//append tr to body
