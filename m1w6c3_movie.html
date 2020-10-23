@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+
+	<script type="text/javascript" src="m1w6c3_movie.js"></script>
+
+	<style type="text/css">
+
+
+	</style>
+
+	<title>Movie Website</title>
+</head>
+<body>
+	<div class="container">
+
+		<h1 align="center">Movie Website</h1>
+
+		<div class="card px-5 py-3 bg-light mt-3">
+			<h2>Movie</h2>
+			<div class="row">
+					<label for="inputCityName" class="form-label">Please enter the movie name</label>
+					<div class="col-9">
+					<input type="text" id="movieInput" class="form-control" aria-describedby="nameHelpBlock">
+				</div>
+
+				<div class="col-3">
+				<button class="btn btn-primary" id="updateBtn" onclick="buttonPressed()">Search</button>
+			</div>
+		</div>
+		</div>	
+		
+		<div class="card px-3 py=3 my-3 bg-light">
+			<h2>List of movie details</h2>
+			<table class="table table-bordered table-striped table-hover bg-light">	
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Year</th>	
+						<th>imdbID</th>
+					    <th>Type</th>
+					    <th>Poster</th>
+					</tr>
+				</thead>
+				<tbody id="movieBody">
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="card px-5 py-5 bg-light mt-3 text-center">
+			<img src="" id="movieImage" width="100">
+			<p id="title"></p>
+			<p id="year"></p>
+			<p id="imdbID"></p>
+			<p id="type"></p>
+			<p id="poster"></p>
+		</div>
+
+	</body>
+</html>
+<!-- 
+<p id="date"></p>
+			<p id="weather"></p>
+			<p id="temp"></p>
+			<p id="pressure"></p>
+			<p id="humidity"></p> -->
