@@ -81,7 +81,7 @@ function buttonPressed(){
 			document.getElementById("year").innerHTML = selectedMovie["Year"];
 			document.getElementById("imdbID").innerHTML = selectedMovie["imdbID"];
 			document.getElementById("type").innerHTML = selectedMovie["Type"]
-			document.getElementById("poster").innerHTML = selectedMovie["imdbID"]
+			document.getElementById("poster").innerHTML = selectedMovie["Poster"]
 
 			var info = "More Movie Info"
 			var result = info.link("http://www.omdbapi.com/?i=" + selectedMovie["imdbID"] + "tt1201607&apikey=87d10179");
